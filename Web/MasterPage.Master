@@ -1,0 +1,185 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="FileBasket.Web.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+        
+    <head id="Head1" runat="server">
+        <title>File Basket</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content=""/>
+        <meta name="author" content=""/>
+
+        <link href="<%# ResolveUrl("~/Content/Bootstrap/css/bootstrap.css") %>" rel="stylesheet" />
+        <style type="text/css">
+            body {
+                padding-bottom: 40px;
+                padding-top: 60px;
+            }
+        </style>
+
+        <link href="<%# ResolveUrl("~/Content/Bootstrap/css/bootstrap-responsive.css") %>" rel="stylesheet" />
+
+
+
+
+        <asp:ContentPlaceHolder runat="server" ID="head"></asp:ContentPlaceHolder>
+
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"> </script>
+        <![endif]-->
+    </head>
+    <body>
+
+        <form id="BodyForm" runat="server">
+            <script type="text/javascript">
+                jQuery(function() {
+                    jQuery('textarea').autoResize({ extraSpace: 0 });
+                });
+            </script>
+            <asp:ScriptManager ID="ScriptManager1" runat="server">
+                <Scripts>
+                    
+
+
+                    <asp:ScriptReference Path="~/Scripts/jquery-1.8.3.js"/>
+                    <asp:ScriptReference Path="~/Scripts/autoResize.js"/>
+                    <asp:ScriptReference Path="~/Content/Bootstrap/js/bootstrap.js"/>
+                </Scripts>
+            </asp:ScriptManager>
+            <asp:Label runat="server" ID="lblUserName" Text="UserName" Visible="False"></asp:Label>
+            <div class="navbar navbar-inverse navbar-fixed-top ">
+                <div class="navbar-inner">
+                    <div class="container">
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <a class="brand" href="#">File Basket</a>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav">
+                                <li><asp:HyperLink ID="hlHome" runat="server" NavigateUrl="~/Default.aspx" Text="Home" ></asp:HyperLink></li>
+                                <li class="dropdown">
+                                    <asp:LoginView ID="LoginView1"  runat="server">
+                                        <RoleGroups>
+                                            <asp:RoleGroup Roles="Admin">
+                                                <ContentTemplate>
+                                                    <li class="dropdown">
+                                                        <a href="#" class="dropdown-toggle"  data-toggle="dropdown">Administration <b class="caret"></b></a>
+                                                        <ul class="dropdown-menu">
+                                                            <li><asp:HyperLink ID="hlUserAdministration" runat="server" Text="User Administration" NavigateUrl="AdminPages/UserAdministration.aspx"></asp:HyperLink></li>
+                                                            <li><asp:HyperLink ID="hlFileAdministration" runat="server" Text="File Administration" NavigateUrl="AdminPages/FileAdministrationPage.aspx"></asp:HyperLink></li>
+                                                        </ul>
+                                                    </li>
+                                                </ContentTemplate>
+                                            </asp:RoleGroup>
+                                        </RoleGroups>
+                                    </asp:LoginView>
+                                </li>
+                             
+                             
+                                <asp:LoginView ID="lvIsAnonymous" runat="server">
+                                    <AnonymousTemplate>
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Registration<b class="caret"></b></a>
+                                            <ul class="dropdown-menu">
+                                                <li><asp:HyperLink ID="hlCreateAccount" runat="server" Text="Create Account" NavigateUrl="PublicPages/RegistrationPage.aspx"></asp:HyperLink></li>
+                                                <li><asp:HyperLink ID="hlPasswordRecovery" runat="server" Text="Forgot your password?" NavigateUrl="PublicPages/PasswordRecoveryPage.aspx"></asp:HyperLink></li>
+                                            </ul>
+                                        </li>
+                                    </AnonymousTemplate>
+                                        
+                                </asp:LoginView>
+                                
+
+                            </ul>
+                            <div class="navbar-form inline ">
+                                <asp:LoginView ID="lvIsLoggedIn" runat="server">
+                                    <AnonymousTemplate>
+                                        <asp:Login ID="MasterLogin"  OnLoginError="OnError" runat="server" RenderOuterTable="False">
+                                            <LayoutTemplate>
+                                                <div class="form-inline">
+                                                    <span class="inline">
+                                                        <asp:Label runat="server" Text="User Name" ForeColor="White" ></asp:Label>
+                                                    
+                                                        <asp:TextBox CssClass="span2" ID="UserName"  runat="server"></asp:TextBox>  
+                                                    </span>
+                                                    <asp:RequiredFieldValidator ID="UserNameRequired" runat="server" ControlToValidate="UserName" ErrorMessage="User Name is required." ToolTip="User Name is required." ValidationGroup="ctl00$Login1">*</asp:RequiredFieldValidator>
+                                                    <span class="inline">
+                                                        <asp:Label runat="server" Text="Password" ForeColor="White" ></asp:Label>
+                                                        <asp:TextBox CssClass="span2" ID="Password" runat="server" TextMode="Password"></asp:TextBox>
+
+                                                    </span>
+
+                                                    <asp:RequiredFieldValidator ID="PasswordRequired" runat="server" ControlToValidate="Password" ErrorMessage="Password is required." ToolTip="Password is required." ValidationGroup="ctl00$Login1">*</asp:RequiredFieldValidator>
+                                                    <asp:Button ID="LoginButton" runat="server" CssClass="btn" CommandName="Login" Text="Log In" ValidationGroup="ctl00$Login1" />
+                                                    <asp:CheckBox runat="server" CssClass="checkbox inline" ID="RememberMe" ForeColor="White" Text="Remember Me">
+                                                    </asp:CheckBox>
+                                                </div> 
+                                            </LayoutTemplate>
+                                        </asp:Login>
+                                    </AnonymousTemplate>
+                                    <LoggedInTemplate>
+                                        <ul class="nav">
+                                       
+                                            <li class="dropdown">
+                                                <a href="#" class="dropdown-toggle"  data-toggle="dropdown"> '<%= HttpUtility.HtmlEncode(lblUserName.Text) %>' <b class="caret"></b></a> 
+                                                <ul class="dropdown-menu">
+                                                    <li>  <asp:HyperLink  ID="hlChangePassword" runat="server" NavigateUrl="PublicPages/ChangePassword/ChangePassWord.aspx">Change Password</asp:HyperLink></li>
+                                                </ul>
+                                            </li>  
+                                        
+                                            <li>
+                                                <asp:LoginStatus  ID="LoginStatus" runat="server" 
+                                                                  LogoutAction="Redirect" 
+                                                                  LogoutPageUrl="~/Default.aspx" />
+                                            </li>
+                                        </ul>
+                                    </LoggedInTemplate>
+
+                                </asp:LoginView>
+                                       
+                            </div>
+                        </div><!--/.nav-collapse -->
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container">
+                <div class="row">
+                    <div class="span12" style="background-color: white">
+                   
+                        <asp:ContentPlaceHolder runat="server" ID="mainPlaceHolder"></asp:ContentPlaceHolder>             
+                    </div>
+
+
+                </div>
+                <div class="span9">
+                    <asp:ContentPlaceHolder ID="leftBottomPlaceHolder" runat="server"></asp:ContentPlaceHolder>
+                    <asp:ContentPlaceHolder ID="rightBottomPlaceHolder" runat="server"></asp:ContentPlaceHolder>
+                </div>
+                   
+
+              
+                
+                
+            </div>
+
+    
+          
+            <hr/>
+
+            <div class="navbar-fixed-bottom container">
+                <p>&copy; Alexandr Makaev 2012</p>
+            </div>       
+                
+
+          
+
+
+        </form>
+    </body>
+
+</html>

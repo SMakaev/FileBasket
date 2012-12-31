@@ -1,0 +1,10 @@
+D:\Training\Project\Main\Source\FileBasket.Data.Tests\bin\Debug\FileBasket.Data.Tests.dll.config
+D:\Training\Project\Main\Source\FileBasket.Data.Tests\bin\Debug\FileBasket.Data.Tests.dll
+D:\Training\Project\Main\Source\FileBasket.Data.Tests\bin\Debug\FileBasket.Data.Tests.pdb
+D:\Training\Project\Main\Source\FileBasket.Data.Tests\bin\Debug\EntityFramework.dll
+D:\Training\Project\Main\Source\FileBasket.Data.Tests\bin\Debug\FileBasket.Data.dll
+D:\Training\Project\Main\Source\FileBasket.Data.Tests\bin\Debug\FileBasket.Data.pdb
+D:\Training\Project\Main\Source\FileBasket.Data.Tests\bin\Debug\EntityFramework.xml
+D:\Training\Project\Main\Source\FileBasket.Data.Tests\obj\Debug\FileBasket.Data.Tests.csprojResolveAssemblyReference.cache
+D:\Training\Project\Main\Source\FileBasket.Data.Tests\obj\Debug\FileBasket.Data.Tests.dll
+D:\Training\Project\Main\Source\FileBasket.Data.Tests\obj\Debug\FileBasket.Data.Tests.pdb

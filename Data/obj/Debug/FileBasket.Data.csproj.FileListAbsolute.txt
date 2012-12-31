@@ -1,0 +1,8 @@
+D:\Training\Project\Main\Source\Data\bin\Debug\FileBasket.Data.dll.config
+D:\Training\Project\Main\Source\Data\bin\Debug\FileBasket.Data.dll
+D:\Training\Project\Main\Source\Data\bin\Debug\FileBasket.Data.pdb
+D:\Training\Project\Main\Source\Data\bin\Debug\EntityFramework.dll
+D:\Training\Project\Main\Source\Data\bin\Debug\EntityFramework.xml
+D:\Training\Project\Main\Source\Data\obj\Debug\FileBasket.Data.csprojResolveAssemblyReference.cache
+D:\Training\Project\Main\Source\Data\obj\Debug\FileBasket.Data.dll
+D:\Training\Project\Main\Source\Data\obj\Debug\FileBasket.Data.pdb

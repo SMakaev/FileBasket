@@ -1,0 +1,10 @@
+D:\Training\Project\Main\Source\PresentationModel\bin\Debug\FileBasket.PresentationModel.dll.config
+D:\Training\Project\Main\Source\PresentationModel\bin\Debug\FileBasket.PresentationModel.dll
+D:\Training\Project\Main\Source\PresentationModel\bin\Debug\FileBasket.PresentationModel.pdb
+D:\Training\Project\Main\Source\PresentationModel\bin\Debug\EntityFramework.dll
+D:\Training\Project\Main\Source\PresentationModel\bin\Debug\FileBasket.Data.dll
+D:\Training\Project\Main\Source\PresentationModel\bin\Debug\FileBasket.Data.pdb
+D:\Training\Project\Main\Source\PresentationModel\bin\Debug\EntityFramework.xml
+D:\Training\Project\Main\Source\PresentationModel\obj\Debug\FileBasket.PresentationModel.csprojResolveAssemblyReference.cache
+D:\Training\Project\Main\Source\PresentationModel\obj\Debug\FileBasket.PresentationModel.dll
+D:\Training\Project\Main\Source\PresentationModel\obj\Debug\FileBasket.PresentationModel.pdb

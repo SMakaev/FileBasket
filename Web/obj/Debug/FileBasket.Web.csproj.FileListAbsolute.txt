@@ -1,0 +1,14 @@
+D:\Training\Project\Main\Source\Web\bin\FileBasket.Web.dll
+D:\Training\Project\Main\Source\Web\bin\FileBasket.Web.pdb
+D:\Training\Project\Main\Source\Web\bin\EntityFramework.dll
+D:\Training\Project\Main\Source\Web\bin\FileBasket.Data.dll
+D:\Training\Project\Main\Source\Web\bin\FileBasket.PresentationModel.dll
+D:\Training\Project\Main\Source\Web\bin\System.Web.dll
+D:\Training\Project\Main\Source\Web\bin\System.Web.Providers.dll
+D:\Training\Project\Main\Source\Web\bin\FileBasket.Data.pdb
+D:\Training\Project\Main\Source\Web\bin\FileBasket.PresentationModel.pdb
+D:\Training\Project\Main\Source\Web\bin\EntityFramework.xml
+D:\Training\Project\Main\Source\Web\bin\System.Web.xml
+D:\Training\Project\Main\Source\Web\obj\Debug\FileBasket.Web.csprojResolveAssemblyReference.cache
+D:\Training\Project\Main\Source\Web\obj\Debug\FileBasket.Web.dll
+D:\Training\Project\Main\Source\Web\obj\Debug\FileBasket.Web.pdb
